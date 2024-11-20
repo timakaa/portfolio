@@ -13,20 +13,20 @@ const Technologies = () => {
     <section className='max-w-7xl my-20 mx-auto' id='tech-stack'>
       <div className='flex justify-center items-center gap-x-20'>
         <motion.h2
-          initial={{ opacity: 0, y: 10, x: -100 }}
-          whileInView={{ opacity: 1, y: 0, x: 0 }}
+          initial={{ opacity: 0, x: -100 }}
+          whileInView={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.3 }}
-          viewport={{ amount: 0.9 }}
+          viewport={{ amount: 0.5 }}
           className={"text-6xl font-bold bg-gradient-to-r flex justify-center"}
         >
           Tech Stack
         </motion.h2>
         <div className='flex justify-center'>
           <motion.div
-            initial={{ opacity: 0, y: 10, x: 100 }}
-            whileInView={{ opacity: 1, y: 0, x: 0 }}
+            initial={{ opacity: 0, x: 100 }}
+            whileInView={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.3 }}
-            viewport={{ amount: 0.4 }}
+            viewport={{ amount: 0.5 }}
             className='relative flex max-w-md size-full items-center justify-center overflow-hidden rounded-lg bg-background '
           >
             <IconCloud iconSlugs={slugs} />

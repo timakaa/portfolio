@@ -29,13 +29,25 @@ export const Timeline = ({ data }) => {
       ref={containerRef}
     >
       <div className='max-w-7xl mx-auto py-20 px-4 md:px-8 lg:px-10'>
-        <h2 className='md:text-4xl text-6xl font-bold mb-4 text-black dark:text-white max-w-4xl'>
+        <motion.h2
+          initial={{ opacity: 0, x: -100 }}
+          whileInView={{ opacity: 1, x: 0 }}
+          transition={{ duration: 0.3 }}
+          viewport={{ amount: 0.9 }}
+          className='md:text-4xl text-6xl font-bold mb-4 text-black dark:text-white max-w-4xl'
+        >
           My Story
-        </h2>
-        <p className='text-neutral-700 font-medium dark:text-neutral-300 text-sm md:text-base max-w-sm'>
+        </motion.h2>
+        <motion.p
+          initial={{ opacity: 0, x: 100 }}
+          whileInView={{ opacity: 1, x: 0 }}
+          transition={{ duration: 0.3, delay: 0.1 }}
+          viewport={{ amount: "all" }}
+          className='text-neutral-700 font-medium dark:text-neutral-300 text-sm md:text-base max-w-sm'
+        >
           I started my journey at the age of 12, and here&apos;s a timeline of
           my journey.
-        </p>
+        </motion.p>
       </div>
       <div ref={ref} className='relative max-w-7xl mx-auto pb-20'>
         {data.map((item, index) => (
