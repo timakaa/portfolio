@@ -49,7 +49,7 @@ const Header = () => {
 
     window.scrollTimer = setTimeout(() => {
       setIsScrollLocked(false);
-    }, 700);
+    }, 1000);
   };
 
   useEffect(() => {
