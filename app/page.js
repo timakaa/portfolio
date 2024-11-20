@@ -1,7 +1,11 @@
+import Hero from "@/components/Hero";
+import Technologies from "@/components/Technologies";
+
 export default function Home() {
   return (
-    <div>
-      <div></div>
-    </div>
+    <main className='max-w-6xl mx-auto'>
+      <Hero />
+      <Technologies />
+    </main>
   );
 }
