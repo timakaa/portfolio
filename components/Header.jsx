@@ -3,12 +3,8 @@
 import React, { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 import { Dock, DockIcon } from "./ui/dock";
-import {
-  HomeIcon,
-  BriefcaseBusiness,
-  Send,
-  CircleUserRound,
-} from "lucide-react";
+import { HomeIcon, BriefcaseBusiness, Send, Cpu } from "lucide-react";
+import { Button } from "./ui/button";
 
 const Header = () => {
   const [isHidden, setIsHidden] = useState(false);
@@ -47,16 +43,49 @@ const Header = () => {
     >
       <Dock direction='middle'>
         <DockIcon>
-          <HomeIcon />
+          <Button
+            onClick={() => {
+              window.scrollTo({ top: 0, behavior: "smooth" });
+            }}
+            variant='ghost'
+            className='p-3 rounded-full'
+          >
+            <HomeIcon size={18} />
+          </Button>
         </DockIcon>
         <DockIcon>
-          <CircleUserRound />
+          <Button
+            onClick={() => {
+              document
+                .getElementById("tech-stack")
+                .scrollIntoView({ behavior: "smooth" });
+            }}
+            variant='ghost'
+            className='p-3 rounded-full'
+          >
+            <Cpu size={18} />
+          </Button>
         </DockIcon>
         <DockIcon>
-          <BriefcaseBusiness />
+          <Button
+            onClick={() => {
+              document
+                .getElementById("projects")
+                .scrollIntoView({ behavior: "smooth" });
+            }}
+            variant='ghost'
+            className='p-3 rounded-full'
+          >
+            <BriefcaseBusiness size={18} />
+          </Button>
         </DockIcon>
         <DockIcon>
-          <Send />
+          <Button
+            variant='ghost'
+            className='p-3 rounded-full flex justify-center items-center'
+          >
+            <Send size={18} className='translate-y-0.5 -translate-x-[1px]' />
+          </Button>
         </DockIcon>
       </Dock>
     </motion.header>

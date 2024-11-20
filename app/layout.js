@@ -10,7 +10,7 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang='en' className={`${GeistSans.className} dark`}>
-      <body className='p-4 '>
+      <body>
         <Header />
         {children}
       </body>

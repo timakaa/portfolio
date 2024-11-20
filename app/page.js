@@ -1,11 +1,13 @@
 import Hero from "@/components/Hero";
 import Technologies from "@/components/Technologies";
+import Projects from "@/components/Projects";
 
 export default function Home() {
   return (
-    <main className='max-w-6xl mx-auto'>
+    <main className='mx-auto p-4'>
       <Hero />
       <Technologies />
+      <Projects />
     </main>
   );
 }

@@ -15,10 +15,17 @@ import GithubLogo from "./ui/GithubLogo";
 import { motion } from "framer-motion";
 import { Instagram } from "lucide-react";
 
-const Hero = () => {
+const Hero = ({ projectsRef }) => {
   return (
-    <div className='min-h-[calc(100vh-125px)] px-20 grid place-items-center'>
+    <div className='min-h-[calc(100vh-125px)] px-20 grid place-items-center max-w-6xl mx-auto'>
       <div>
+        <h2 className='text-center'>
+          <BlurIn
+            delay={0.3}
+            className={"!text-lg !font-medium"}
+            word={"Hello, I'm Timur"}
+          />
+        </h2>
         <h1 className='text-center'>
           <BlurIn
             delay={0.3}
@@ -57,6 +64,11 @@ const Hero = () => {
             className='px-8'
             variant='shine'
             size='lg'
+            onClick={() => {
+              document
+                .getElementById("projects")
+                .scrollIntoView({ behavior: "smooth" });
+            }}
           >
             <span className='mr-2'>My Projects</span>
             <ChevronRight size={16} />
