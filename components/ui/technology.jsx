@@ -16,7 +16,7 @@ export default function Technology({ name, description, icon, color, link }) {
           window.open(link, "_blank");
         }}
         className={cn(
-          "relative select-none mx-auto min-h-fit w-full max-w-[400px] cursor-pointer overflow-hidden rounded-2xl p-4",
+          "relative select-none min-h-fit w-full cursor-pointer overflow-hidden rounded-2xl p-4",
           // light styles
           "bg-white",
           // dark styles

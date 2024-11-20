@@ -10,7 +10,7 @@ import FadeIn from "./ui/FadeIn";
 
 const Technologies = () => {
   return (
-    <section className='max-w-7xl py-20 mx-auto' id='tech-stack'>
+    <section className='max-w-5xl py-20 mx-auto' id='tech-stack'>
       <div className='flex justify-center items-center gap-x-20'>
         <motion.h2
           initial={{ opacity: 0, x: -100 }}
@@ -33,7 +33,7 @@ const Technologies = () => {
           </motion.div>
         </div>
       </div>
-      <div className='flex flex-col items-center justify-center'>
+      <div className=''>
         <div>
           {Object.entries(technologies).map(([category, items]) => (
             <div key={category}>
@@ -46,7 +46,7 @@ const Technologies = () => {
               >
                 {category.charAt(0).toUpperCase() + category.slice(1)}
               </motion.div>
-              <div className='grid grid-cols-3 gap-2'>
+              <div className='grid grid-cols-3 w-full gap-2'>
                 {items.map((technology, index) => (
                   <FadeIn key={technology.name} index={index}>
                     <Technology

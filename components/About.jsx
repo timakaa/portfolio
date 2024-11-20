@@ -148,7 +148,7 @@ const data = [
 
 const About = () => {
   return (
-    <div className='min-h-screen py-20 max-w-7xl mx-auto' id='about'>
+    <div className='min-h-screen py-20 max-w-5xl mx-auto' id='about'>
       <Timeline data={data} />
     </div>
   );

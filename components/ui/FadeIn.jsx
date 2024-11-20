@@ -28,6 +28,7 @@ const FadeIn = ({ children, index = 0 }) => {
         delay: windowWidth > 768 ? (index % 3) * 0.1 : 0,
       }}
       viewport={{ amount: 0.9 }}
+      className='w-full'
     >
       {children}
     </motion.div>
