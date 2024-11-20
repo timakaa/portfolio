@@ -23,7 +23,7 @@ const Hero = ({ projectsRef }) => {
           <BlurIn
             delay={0.3}
             className={"!text-lg !font-medium"}
-            word={"Hello, I'm Timur"}
+            word={"Hello, I'm Tima"}
           />
         </h2>
         <h1 className='text-center'>
