@@ -2,6 +2,13 @@ import { ArrowRightIcon } from "@radix-ui/react-icons";
 
 import { cn } from "@/lib/utils";
 import { Button } from "@/components/ui/button";
+import Lock from "./Lock";
+import {
+  Tooltip,
+  TooltipContent,
+  TooltipProvider,
+  TooltipTrigger,
+} from "@/components/ui/tooltip";
 
 const BentoGrid = ({ children, className }) => {
   return (
@@ -25,6 +32,7 @@ const BentoCard = ({
   href,
   cta,
   technologies,
+  available = true,
 }) => (
   <div
     key={name}
@@ -37,6 +45,22 @@ const BentoCard = ({
       className,
     )}
   >
+    {!available && (
+      <div className='absolute top-6 left-6 z-10'>
+        <TooltipProvider>
+          <Tooltip delayDuration={0}>
+            <TooltipTrigger asChild>
+              <div className='z-20 text-neutral-500'>
+                <Lock />
+              </div>
+            </TooltipTrigger>
+            <TooltipContent>
+              <p>This project is not live</p>
+            </TooltipContent>
+          </Tooltip>
+        </TooltipProvider>
+      </div>
+    )}
     <div>{background}</div>
     <div className='pointer-events-none absolute inset-0 transform-gpu transition-all duration-300 group-hover:bg-black/[.03] group-hover:dark:bg-neutral-800/10 z-[1]' />
     <a href={href} target='_blank' className='absolute inset-0 z-[5]'></a>
@@ -47,7 +71,7 @@ const BentoCard = ({
     >
       <Button
         variant='ghost'
-        onClick={() => window.open(href, "_blank")}
+        onClick={() => href && window.open(href, "_blank")}
         size='sm'
         className='pointer-events-auto relative z-[15]'
       >

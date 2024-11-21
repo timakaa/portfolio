@@ -43,37 +43,34 @@ const features = [
     ),
   },
   {
-    name: "CoinMix",
-    description: "A platform for investing and be rewarded.",
-    href: "https://coinmix.space",
+    name: "CryptoPay",
+    description: "A crypto payment gateway integrated with Telegram.",
     cta: "Learn more",
     className: "col-span-3 lg:col-span-1",
     technologies: [
       {
-        icon: <Image src={"/react.svg"} alt='React' width={20} height={20} />,
-        name: "React",
-      },
-      {
-        icon: <Image src={"/js.svg"} alt='JavaScript' width={20} height={20} />,
-        name: "JavaScript",
+        icon: <Image src={"/nest.svg"} alt='Nest' width={20} height={20} />,
+        name: "Nest.js",
       },
       {
         icon: (
-          <Image src={"/tailwind.svg"} alt='Tailwind' width={20} height={20} />
+          <Image
+            src={"/postgres.svg"}
+            alt='PostgreSQL'
+            width={20}
+            height={20}
+          />
         ),
-        name: "Tailwind",
-      },
-      {
-        icon: <Image src={"/python.svg"} alt='Python' width={20} height={20} />,
-        name: "Python",
+        name: "PostgreSQL",
       },
     ],
+    available: false,
     background: (
       <div className='absolute inset-0 w-full h-full'>
         <Image
-          src={"/coinmixscreen.png"}
-          alt='CoinMix'
-          className='object-contain w-full h-full z-0 pb-1 group-hover:scale-105 group-hover:pb-3 duration-300'
+          src={"/cryptopayscreen.png"}
+          alt='CryptoPay'
+          className='object-cover w-full h-full z-0 pb-1 group-hover:scale-105 group-hover:pb-3 duration-300'
           width={0}
           height={0}
           unoptimized
@@ -83,8 +80,7 @@ const features = [
   },
   {
     name: "MyDiscipline",
-    description: "A platform for tracking your habits.",
-    href: "https://mydiscipline.app",
+    description: "A platform for tracking everything.",
     cta: "Learn more",
     className: "col-span-3 lg:col-span-1",
     technologies: [
@@ -112,6 +108,58 @@ const features = [
         name: "PostgreSQL",
       },
     ],
+    background: (
+      <div className='absolute inset-0 w-full h-full'>
+        <Image
+          src={"/mydisciplinescreen.png"}
+          alt='MyDiscipline'
+          className='object-cover w-full h-full z-0 pb-1 group-hover:scale-105 group-hover:pb-3 duration-300'
+          width={0}
+          height={0}
+          unoptimized
+        />
+      </div>
+    ),
+    available: false,
+  },
+  {
+    name: "VideoLoader",
+    description: "App for loading videos from any platform.",
+    cta: "Learn more",
+    className: "col-span-3 lg:col-span-1",
+    technologies: [
+      {
+        icon: (
+          <Image src={"/nextjs.svg"} alt='Next.js' width={20} height={20} />
+        ),
+        name: "Next.js",
+      },
+      {
+        icon: (
+          <Image src={"/tailwind.svg"} alt='Tailwind' width={20} height={20} />
+        ),
+        name: "Tailwind",
+      },
+      {
+        icon: (
+          <Image src={"/mongodb.svg"} alt='MongoDB' width={20} height={20} />
+        ),
+        name: "MongoDB",
+      },
+    ],
+    background: (
+      <div className='absolute inset-0 w-full h-full'>
+        <Image
+          src={"/videoloaderscreen.png"}
+          alt='VideoLoader'
+          className='object-cover w-full h-full z-0 pb-1 group-hover:scale-105 group-hover:pb-3 duration-300'
+          width={0}
+          height={0}
+          unoptimized
+        />
+      </div>
+    ),
+    available: false,
   },
 ];
 
