@@ -28,7 +28,7 @@ const ShineBorder = memo(function ShineBorder({
           "--border-radius": `${borderRadius}px`,
         }}
         className={cn(
-          "relative min-h-[60px] w-fit min-w-[300px] place-items-center rounded-[--border-radius] p-[2px]",
+          "relative min-h-[60px] w-fit place-items-center rounded-[--border-radius] p-[2px]",
           className,
         )}
       >

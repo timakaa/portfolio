@@ -10,6 +10,7 @@ import {
   CircleUserRound,
 } from "lucide-react";
 import { Button } from "./ui/button";
+import { isMobile } from "react-device-detect";
 
 const Header = () => {
   const [isHidden, setIsHidden] = useState(false);
@@ -61,10 +62,10 @@ const Header = () => {
   return (
     <motion.header
       className='sticky top-0 flex justify-center !z-50'
-      initial={{ y: -100, scale: 0.6 }}
+      initial={{ y: -100, scale: !isMobile ? 0.6 : 1 }}
       animate={{
         y: isHidden ? -100 : 0,
-        scale: isHidden ? 0.6 : 1,
+        scale: !isMobile ? (isHidden ? 0.6 : 1) : 1,
       }}
       transition={{ duration: 0.2, ease: "easeOut" }}
     >

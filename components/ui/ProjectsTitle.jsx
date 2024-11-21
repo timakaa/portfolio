@@ -3,22 +3,23 @@
 import { Button } from "./button";
 import { ChevronRight } from "lucide-react";
 import { motion } from "framer-motion";
+import { isMobile } from "react-device-detect";
 
 const ProjectsTitle = () => {
   return (
     <div className='flex justify-between items-center'>
       <motion.h2
-        className='text-6xl font-bold bg-gradient-to-r flex justify-center'
-        initial={{ opacity: 0, x: -100 }}
-        whileInView={{ opacity: 1, x: 0 }}
+        className='text-4xl md:text-6xl font-bold bg-gradient-to-r flex justify-center'
+        initial={{ opacity: 0, x: !isMobile ? -100 : 0 }}
+        whileInView={{ opacity: 1, x: !isMobile ? 0 : 0 }}
         transition={{ duration: 0.3 }}
         viewport={{ amount: 0.5 }}
       >
         Projects
       </motion.h2>
       <motion.div
-        initial={{ opacity: 0, x: 100 }}
-        whileInView={{ opacity: 1, x: 0 }}
+        initial={{ opacity: 0, x: !isMobile ? 100 : 0 }}
+        whileInView={{ opacity: 1, x: !isMobile ? 0 : 0 }}
         transition={{ duration: 0.3 }}
         viewport={{ amount: 0.5 }}
       >

@@ -2,6 +2,7 @@
 
 import { useScroll, useTransform, motion } from "framer-motion";
 import React, { useEffect, useRef, useState } from "react";
+import { isMobile } from "react-device-detect";
 
 export const Timeline = ({ data }) => {
   const ref = useRef(null);
@@ -27,17 +28,17 @@ export const Timeline = ({ data }) => {
     <div className='w-full font-sans' ref={containerRef}>
       <div className='max-w-5xl'>
         <motion.h2
-          initial={{ opacity: 0, x: -100 }}
-          whileInView={{ opacity: 1, x: 0 }}
+          initial={{ opacity: 0, x: !isMobile ? -100 : 0 }}
+          whileInView={{ opacity: 1, x: !isMobile ? 0 : 0 }}
           transition={{ duration: 0.3 }}
           viewport={{ amount: 0.9 }}
-          className='md:text-4xl text-6xl font-bold mb-4 text-black dark:text-white max-w-4xl'
+          className='md:text-6xl text-4xl font-bold mb-4 text-black dark:text-white max-w-4xl'
         >
           My Story
         </motion.h2>
         <motion.p
-          initial={{ opacity: 0, x: 100 }}
-          whileInView={{ opacity: 1, x: 0 }}
+          initial={{ opacity: 0, x: !isMobile ? 100 : 0 }}
+          whileInView={{ opacity: 1, x: !isMobile ? 0 : 0 }}
           transition={{ duration: 0.3, delay: 0.1 }}
           viewport={{ amount: "all" }}
           className='text-neutral-700 font-medium dark:text-neutral-300 text-sm md:text-base max-w-sm'

@@ -15,8 +15,8 @@ const Footer = () => {
   };
 
   return (
-    <footer className='relative'>
-      <div className='min-h-[500px] p-14 px-10 relative border border-border mx-auto max-w-5xl mb-10 rounded-xl'>
+    <footer className='relative px-4 md:px-0'>
+      <div className='min-h-[500px] p-14 px-10 relative border border-border mx-auto max-w-2xl lg:max-w-5xl mb-10 rounded-xl'>
         <div className='z-50 relative'>
           <div className='text-3xl font-semibold'>
             Do you want to work with me?
@@ -39,7 +39,7 @@ const Footer = () => {
               Telegram
             </a>
           </div>
-          <div className='mt-36 flex justify-between'>
+          <div className='mt-36 flex justify-between flex-col md:flex-row'>
             <div>
               <div className='text-lg font-semibold'>Timur Djeletyan</div>
               <div className='text-neutral-500 mt-2'>
@@ -49,7 +49,7 @@ const Footer = () => {
                 <Socials />
               </div>
             </div>
-            <div className='flex pr-2 gap-x-16'>
+            <div className='flex pr-2 mt-6 md:mt-0 gap-x-16'>
               <div>
                 <div className='text-lg font-semibold'>Navigate</div>
                 <div className='flex flex-col mt-1 text-neutral-500'>

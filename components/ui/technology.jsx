@@ -16,27 +16,27 @@ export default function Technology({ name, description, icon, color, link }) {
           window.open(link, "_blank");
         }}
         className={cn(
-          "relative select-none min-h-fit w-full cursor-pointer overflow-hidden rounded-2xl p-4",
+          "relative select-none w-full cursor-pointer overflow-hidden rounded-2xl p-4",
           // light styles
           "bg-white",
           // dark styles
           "transform-gpu dark:bg-transparent dark:[box-shadow:0_-20px_80px_-20px_#ffffff1f_inset]",
         )}
       >
-        <div className='flex flex-row items-center gap-3'>
+        <div className='flex flex-col md:flex-row items-center gap-3'>
           <div
-            className='flex size-14 p-2 items-center justify-center rounded-lg'
+            className='flex shrink-0 size-14 p-2 items-center justify-center rounded-lg'
             style={{
               backgroundColor: `${color}`,
             }}
           >
             <span className='text-lg'>{icon}</span>
           </div>
-          <div className='flex flex-col overflow-hidden'>
+          <div className='flex-col overflow-hidden'>
             <figcaption className='flex flex-row items-center whitespace-pre text-lg font-medium dark:text-white '>
               <span className='text-sm sm:text-lg'>{name}</span>
             </figcaption>
-            <p className='text-sm font-normal dark:text-white/60'>
+            <p className='text-xs md:text-sm font-normal dark:text-white/60 hidden md:block'>
               {description}
             </p>
           </div>
