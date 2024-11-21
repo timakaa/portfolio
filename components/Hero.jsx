@@ -21,7 +21,11 @@ const Hero = ({ projectsRef }) => {
           <BlurIn
             delay={0.3}
             className={"text-4xl md:text-7xl inline font-bold"}
-            word={"Fast "}
+            word={
+              <span>
+                Fast <br className='md:hidden' />
+              </span>
+            }
           />
           <BlurIn
             className={

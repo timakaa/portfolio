@@ -88,12 +88,12 @@ const BentoCard = ({
       <h3 className='text-xl font-semibold text-neutral-700 dark:text-neutral-300'>
         {name}
       </h3>
-      <div className='flex gap-2'>
+      <div className='flex gap-2 flex-wrap my-1'>
         {technologies &&
           technologies.map((technology) => (
             <div
               key={technology.name}
-              className='flex items-center bg-background gap-2 text-sm border-border border rounded-md px-2 py-2'
+              className='flex shrink-0 items-center bg-background gap-2 text-sm border-border border rounded-md px-2 py-2'
             >
               {technology.icon}
               <span>{technology.name}</span>
