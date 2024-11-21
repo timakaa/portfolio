@@ -24,12 +24,6 @@ body::before {
   mask-image: radial-gradient(circle at center, black 10%, transparent 100%);
 }
 
-.body {
-  background-color: hsl(var(--background));
-  position: relative;
-  @apply min-h-screen;
-}
-
 @layer components {
   .dot-background {
     background-color: hsl(var(--background));
@@ -115,6 +109,6 @@ body::before {
     @apply border-border;
   }
   body {
-    @apply bg-background text-foreground;
+    @apply bg-background text-foreground relative overflow-x-hidden;
   }
 }

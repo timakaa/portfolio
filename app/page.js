@@ -5,7 +5,7 @@ import About from "@/components/About";
 
 export default function Home() {
   return (
-    <main className='mx-auto p-4'>
+    <main className='mx-auto p-4 overflow-x-hidden'>
       <Hero />
       <Technologies />
       <Projects />
