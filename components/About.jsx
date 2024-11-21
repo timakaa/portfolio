@@ -100,7 +100,7 @@ const data = [
           initial={{ opacity: 0, x: 20 }}
           whileInView={{ opacity: 1, x: 0 }}
           viewport={{ amount: 0.8 }}
-          className='text-neutral-800 dark:text-neutral-400 text-base md:text-lg font-normal mt-4'
+          className='text-neutral-800 dark:text-neutral-500 text-xs md:text-sm font-normal mt-4'
         >
           The main thing was integration with the web socket server.
         </motion.p>
