@@ -24,7 +24,8 @@ const Header = () => {
       const currentScrollY = window.scrollY;
 
       if (
-        currentScrollY > (isMobile ? 140 : 250) &&
+        currentScrollY >
+          document.getElementById("hero-first-word").offsetTop - 100 &&
         currentScrollY > lastScrollY
       ) {
         setIsHidden(true);

@@ -6,11 +6,11 @@ import BlurIn from "./ui/blur-in";
 import { motion } from "framer-motion";
 import Socials from "./ui/Socials";
 
-const Hero = ({ projectsRef }) => {
+const Hero = () => {
   return (
     <div className='min-h-[calc(100vh-125px)] px-6 md:px-20 grid place-items-center max-w-2xl md:max-w-5xl mx-auto'>
       <div>
-        <h2 className='text-center'>
+        <h2 className='text-center' id='hero-first-word'>
           <BlurIn
             delay={0.3}
             className={"!text-lg !font-medium"}
