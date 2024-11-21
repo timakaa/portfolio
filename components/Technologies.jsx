@@ -11,7 +11,7 @@ import FadeIn from "./ui/FadeIn";
 const Technologies = () => {
   return (
     <section className='max-w-5xl py-20 mx-auto' id='tech-stack'>
-      <div className='flex justify-center items-center gap-x-20'>
+      <div className='flex justify-center items-center gap-x-32'>
         <motion.h2
           initial={{ opacity: 0, x: -100 }}
           whileInView={{ opacity: 1, x: 0 }}

@@ -23,7 +23,7 @@ const ProjectsTitle = () => {
         viewport={{ amount: 0.5 }}
       >
         <Button variant='shine'>
-          <span>View All</span>
+          <span>See All</span>
           <ChevronRight className='ml-2 h-4 w-4' />
         </Button>
       </motion.div>
