@@ -23,7 +23,10 @@ const Header = () => {
     const handleScroll = () => {
       const currentScrollY = window.scrollY;
 
-      if (currentScrollY > 250 && currentScrollY > lastScrollY) {
+      if (
+        currentScrollY > (isMobile ? 140 : 250) &&
+        currentScrollY > lastScrollY
+      ) {
         setIsHidden(true);
       } else {
         setIsHidden(false);
