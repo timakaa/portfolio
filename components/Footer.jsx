@@ -17,7 +17,7 @@ const Footer = () => {
   return (
     <footer className='relative px-4 md:px-0'>
       <div className='min-h-[500px] p-14 px-10 relative border border-border mx-auto max-w-2xl lg:max-w-5xl mb-10 rounded-xl'>
-        <div className='z-50 relative'>
+        <div className='z-40 relative'>
           <div className='text-3xl font-semibold'>
             Do you want to work with me?
           </div>
