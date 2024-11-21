@@ -29,6 +29,18 @@ const features = [
         name: "Python",
       },
     ],
+    background: (
+      <div className='absolute inset-0 w-full h-full'>
+        <Image
+          src={"/bidautoscreen.png"}
+          alt='BidAuto'
+          className='object-cover w-full h-full z-0 pb-1 group-hover:scale-105 group-hover:pb-3 duration-300'
+          width={0}
+          height={0}
+          unoptimized
+        />
+      </div>
+    ),
   },
   {
     name: "CoinMix",
@@ -56,6 +68,18 @@ const features = [
         name: "Python",
       },
     ],
+    background: (
+      <div className='absolute inset-0 w-full h-full'>
+        <Image
+          src={"/coinmixscreen.png"}
+          alt='CoinMix'
+          className='object-contain w-full h-full z-0 pb-1 group-hover:scale-105 group-hover:pb-3 duration-300'
+          width={0}
+          height={0}
+          unoptimized
+        />
+      </div>
+    ),
   },
   {
     name: "MyDiscipline",
