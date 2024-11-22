@@ -165,7 +165,7 @@ const features = [
 
 const Projects = () => {
   return (
-    <div className='dot-background py-20' id='projects'>
+    <div className='dot-background py-28 md:py-20' id='projects'>
       <div className='max-w-2xl md:max-w-5xl mx-auto px-6 md:px-0'>
         <ProjectsTitle />
         <ProjectsList features={features} />

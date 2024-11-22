@@ -218,7 +218,7 @@ const About = () => {
   ];
   return (
     <div
-      className='min-h-screen py-20 max-w-2xl md:max-w-5xl mx-auto px-6 md:px-0'
+      className='min-h-screen py-28 md:py-20 max-w-2xl md:max-w-5xl mx-auto px-6 md:px-0'
       id='about'
     >
       <Timeline data={data} />

@@ -12,7 +12,7 @@ import { isMobile } from "react-device-detect";
 const Technologies = () => {
   return (
     <section
-      className='max-w-2xl lg:max-w-5xl py-20 px-4 md:px-0 mx-auto'
+      className='max-w-2xl lg:max-w-5xl py-28 md:py-20 px-4 md:px-0 mx-auto'
       id='tech-stack'
     >
       <div className='flex justify-center items-center gap-x-32'>
