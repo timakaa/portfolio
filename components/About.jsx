@@ -128,8 +128,7 @@ const About = () => {
             viewport={{ amount: 0.8 }}
             className='text-neutral-800 dark:text-neutral-500 text-xs md:text-sm font-normal mb-4'
           >
-            I think now my passion is back and money it is just a good bonus{" "}
-            {":)"}
+            I think now my passion is back and money it is just a good bonus.
           </motion.p>
           <motion.div
             initial={{ opacity: 0, x: !isMobile ? 20 : 0 }}
@@ -210,7 +209,7 @@ const About = () => {
             viewport={{ amount: 0.8 }}
             className='text-neutral-800 dark:text-neutral-500 text-xs md:text-sm font-normal mt-4'
           >
-            Now my UI is better, I like it {":)"}
+            Now my UI is better, I like it.
           </motion.p>
         </div>
       ),
