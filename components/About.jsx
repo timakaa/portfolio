@@ -22,7 +22,7 @@ const About = () => {
             className='text-neutral-800 dark:text-neutral-200 text-base md:text-xl font-medium mb-8'
           >
             The pandemic hit and I was forced to stay home. I started learning
-            how to code and build websites.
+            how to code and build websites
           </motion.p>
         </div>
       ),
@@ -37,7 +37,7 @@ const About = () => {
             viewport={{ amount: 0.8 }}
             className='text-neutral-800 dark:text-neutral-200 text-base md:text-xl font-medium mb-2'
           >
-            Then I started building simple projects.
+            Then I started building simple projects
           </motion.p>
           <motion.p
             initial={{ opacity: 0, x: !isMobile ? 20 : 0 }}
@@ -45,7 +45,7 @@ const About = () => {
             viewport={{ amount: 0.8 }}
             className='text-neutral-800 dark:text-neutral-500 text-xs md:text-sm font-normal mb-4'
           >
-            Great times.
+            Great times
           </motion.p>
           <motion.div
             initial={{ opacity: 0, x: !isMobile ? 20 : 0 }}
@@ -74,7 +74,7 @@ const About = () => {
             className='text-neutral-800 dark:text-neutral-200 text-base md:text-xl font-medium mb-2'
           >
             I learned a lot about web development and decided to build something
-            more complex. And it was my own social media platform.
+            more complex. And it was my own social media platform
           </motion.p>
           <motion.p
             initial={{ opacity: 0, x: !isMobile ? 20 : 0 }}
@@ -83,7 +83,7 @@ const About = () => {
             className='text-neutral-800 dark:text-neutral-500 text-xs md:text-sm font-normal mb-4'
           >
             The UI was bad back then. This site was bad in general, but it was a
-            big step for me.
+            big step for me
           </motion.p>
           <motion.div
             initial={{ opacity: 0, x: !isMobile ? 20 : 0 }}
@@ -104,7 +104,7 @@ const About = () => {
             viewport={{ amount: 0.8 }}
             className='text-neutral-800 dark:text-neutral-500 text-xs md:text-sm font-normal mt-4'
           >
-            The main thing was integration with the web socket server.
+            The main thing was integration with the web socket server
           </motion.p>
         </div>
       ),
@@ -119,7 +119,7 @@ const About = () => {
             viewport={{ amount: 0.8 }}
             className='text-neutral-800 dark:text-neutral-200 font-medium text-base md:text-xl mb-2'
           >
-            My first production project.
+            My first production project
           </motion.p>
           <motion.p
             initial={{ opacity: 0, x: !isMobile ? 20 : 0 }}
@@ -127,7 +127,7 @@ const About = () => {
             viewport={{ amount: 0.8 }}
             className='text-neutral-800 dark:text-neutral-500 text-xs md:text-sm font-normal mb-4'
           >
-            Stripe integration the main thing.
+            Stripe integration the main thing
           </motion.p>
           <motion.div
             initial={{ opacity: 0, x: !isMobile ? 20 : 0 }}
@@ -148,7 +148,7 @@ const About = () => {
             viewport={{ amount: 0.8 }}
             className='text-neutral-800 dark:text-neutral-500 text-xs md:text-sm font-normal mt-4'
           >
-            Still bad UI, but a lot of work was done.
+            Still bad UI, but a lot of work was done
           </motion.p>
         </div>
       ),
@@ -164,7 +164,7 @@ const About = () => {
             className='text-neutral-800 dark:text-neutral-200 font-medium text-base md:text-xl mb-2'
           >
             Here we go. I really learned a lot. I built even more high-quality
-            projects.
+            projects
           </motion.p>
           <motion.p
             initial={{ opacity: 0, x: !isMobile ? 20 : 0 }}
@@ -172,7 +172,7 @@ const About = () => {
             viewport={{ amount: 0.8 }}
             className='text-neutral-800 dark:text-neutral-500 text-xs md:text-sm font-normal mb-4'
           >
-            I told you my passion is back.
+            My beautiful UI is the main thing here
           </motion.p>
           <div className='grid grid-cols-2 gap-4'>
             <motion.div
@@ -202,14 +202,6 @@ const About = () => {
               />
             </motion.div>
           </div>
-          <motion.p
-            initial={{ opacity: 0, x: !isMobile ? 20 : 0 }}
-            whileInView={{ opacity: 1, x: !isMobile ? 0 : 0 }}
-            viewport={{ amount: 0.8 }}
-            className='text-neutral-800 dark:text-neutral-500 text-xs md:text-sm font-normal mt-4'
-          >
-            Now my UI is better, I like it.
-          </motion.p>
         </div>
       ),
     },
