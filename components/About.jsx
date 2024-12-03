@@ -119,8 +119,7 @@ const About = () => {
             viewport={{ amount: 0.8 }}
             className='text-neutral-800 dark:text-neutral-200 font-medium text-base md:text-xl mb-2'
           >
-            My first production project. I think I started to lose passion
-            because I was doing it more for money, not for fun.
+            My first production project.
           </motion.p>
           <motion.p
             initial={{ opacity: 0, x: !isMobile ? 20 : 0 }}
@@ -128,7 +127,7 @@ const About = () => {
             viewport={{ amount: 0.8 }}
             className='text-neutral-800 dark:text-neutral-500 text-xs md:text-sm font-normal mb-4'
           >
-            I think now my passion is back and money it is just a good bonus.
+            Stripe integration the main thing.
           </motion.p>
           <motion.div
             initial={{ opacity: 0, x: !isMobile ? 20 : 0 }}
