@@ -90,14 +90,7 @@ const Footer = () => {
                     BidAuto
                   </a>
                   <a
-                    href='https://coinmix.space'
-                    target='_blank'
-                    className='cursor-pointer'
-                  >
-                    CoinMix
-                  </a>
-                  <a
-                    href='https://mydiscipline.app'
+                    href='https://mydiscipline.online'
                     target='_blank'
                     className='cursor-pointer'
                   >
