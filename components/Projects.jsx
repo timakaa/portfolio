@@ -82,7 +82,9 @@ const features = [
     name: "MyDiscipline",
     description: "A platform for tracking everything.",
     cta: "Learn more",
+    href: "https://mydiscipline.online/",
     className: "col-span-3 lg:col-span-1",
+    available: true,
     technologies: [
       {
         icon: (
@@ -120,7 +122,6 @@ const features = [
         />
       </div>
     ),
-    available: false,
   },
   {
     name: "VideoLoader",
