@@ -19,11 +19,11 @@ const TechnologyLegend = ({
 }) => {
   return (
     <div className='px-6 md:px-20 z-20 bg-background py-8 rounded-xl border border-border max-w-xl md:max-w-4xl mx-auto'>
-      <div className='flex items-center gap-4'>
-        <div className='size-14 relative'>
+      <div className='flex items-center md:gap-4 gap-2'>
+        <div className='md:size-14 size-8 relative'>
           {React.cloneElement(icon, { className: "w-full h-full" })}
         </div>
-        <span className='text-4xl font-bold'>{name}</span>
+        <span className='mdLtext-4xl text-xl font-bold'>{name}</span>
       </div>
       <div className='flex flex-wrap gap-4 mt-4'>
         {technologies.map((technology) => (
