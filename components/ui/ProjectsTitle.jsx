@@ -4,6 +4,7 @@ import { Button } from "./button";
 import { ChevronRight } from "lucide-react";
 import { motion } from "framer-motion";
 import { isMobile } from "react-device-detect";
+import Link from "next/link";
 
 const ProjectsTitle = () => {
   return (
@@ -23,10 +24,14 @@ const ProjectsTitle = () => {
         transition={{ duration: 0.3 }}
         viewport={{ amount: 0.5 }}
       >
-        <Button variant='shine'>
-          <span>See All</span>
-          <ChevronRight className='ml-2 h-4 w-4' />
-        </Button>
+        <Link href='/projects'>
+          <Button asChild variant='shine'>
+            <div>
+              <span>See All</span>
+              <ChevronRight className='ml-2 h-4 w-4' />
+            </div>
+          </Button>
+        </Link>
       </motion.div>
     </div>
   );

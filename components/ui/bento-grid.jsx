@@ -9,6 +9,9 @@ import {
   TooltipProvider,
   TooltipTrigger,
 } from "@/components/ui/tooltip";
+import Link from "next/link";
+import React from "react";
+import ProjectTechnology from "../ProjectTechnology";
 
 const BentoGrid = ({ children, className }) => {
   return (
@@ -27,12 +30,13 @@ const BentoCard = ({
   name,
   className,
   background,
-  Icon,
+  icon,
+  iconClassName,
   description,
   href,
   cta,
   technologies,
-  available = true,
+  projectLink,
 }) => (
   <div
     key={name}
@@ -45,7 +49,7 @@ const BentoCard = ({
       className,
     )}
   >
-    {!available && (
+    {!projectLink && (
       <div className='absolute top-6 left-6 z-10'>
         <TooltipProvider>
           <Tooltip delayDuration={0}>
@@ -63,27 +67,33 @@ const BentoCard = ({
     )}
     <div>{background}</div>
     <div className='pointer-events-none absolute inset-0 transform-gpu transition-all duration-300 group-hover:bg-black/[.03] group-hover:dark:bg-neutral-800/10 z-[1]' />
-    <a href={href} target='_blank' className='absolute inset-0 z-[5]'></a>
+    <Link href={href} className='absolute inset-0 z-[5]'></Link>
     <div
       className={cn(
         "pointer-events-none absolute bottom-0 flex w-full translate-y-10 transform-gpu flex-row items-center p-4 opacity-0 transition-all duration-300 group-hover:translate-y-0 group-hover:opacity-100 z-[10]",
       )}
     >
-      <Button
-        variant='ghost'
-        onClick={() => href && window.open(href, "_blank")}
-        size='sm'
-        className='pointer-events-auto relative z-[15]'
-      >
-        <>
-          {cta}
-          <ArrowRightIcon className='ml-2 h-4 w-4' />
-        </>
-      </Button>
+      <Link href={href}>
+        <Button
+          asChild
+          variant='ghost'
+          size='sm'
+          className='pointer-events-auto relative z-[15]'
+        >
+          <div className='flex items-center'>
+            {cta}
+            <ArrowRightIcon className='ml-2 h-4 w-4' />
+          </div>
+        </Button>
+      </Link>
     </div>
     <div className='pointer-events-none z-10 flex transform-gpu flex-col gap-1 p-6 transition-all duration-300 group-hover:-translate-y-10'>
-      {Icon && (
-        <Icon className='h-12 w-12 origin-left transform-gpu text-neutral-700 transition-all duration-300 ease-in-out group-hover:scale-75' />
+      {icon && (
+        <div className={cn("size-8 md:size-10 z-20 relative", iconClassName)}>
+          {React.cloneElement(icon, {
+            className: cn("w-full h-full"),
+          })}
+        </div>
       )}
       <h3 className='text-xl font-semibold text-neutral-700 dark:text-neutral-300'>
         {name}
@@ -91,13 +101,7 @@ const BentoCard = ({
       <div className='flex gap-2 flex-wrap my-1'>
         {technologies &&
           technologies.map((technology) => (
-            <div
-              key={technology.name}
-              className='flex shrink-0 items-center bg-background gap-2 text-sm border-border border rounded-md px-2 py-2'
-            >
-              {technology.icon}
-              <span>{technology.name}</span>
-            </div>
+            <ProjectTechnology key={technology.name} {...technology} />
           ))}
       </div>
       <p className='max-w-lg text-neutral-400'>{description}</p>

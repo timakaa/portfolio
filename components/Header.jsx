@@ -11,10 +11,15 @@ import {
 } from "lucide-react";
 import { Button } from "./ui/button";
 import { isMobile } from "react-device-detect";
+import { usePathname } from "next/navigation";
+import { useRouter } from "next/navigation";
 
 const Header = () => {
   const [isHidden, setIsHidden] = useState(false);
   const [isScrollLocked, setIsScrollLocked] = useState(false);
+  const [scrollTimer, setScrollTimer] = useState(null);
+  const pathname = usePathname();
+  const router = useRouter();
 
   useEffect(() => {
     if (isScrollLocked) return;
@@ -23,10 +28,14 @@ const Header = () => {
     const handleScroll = () => {
       const currentScrollY = window.scrollY;
 
+      const element =
+        pathname !== "/" ? null : document.getElementById("hero-first-word");
+
       if (
-        currentScrollY >
-          document.getElementById("hero-first-word").offsetTop - 100 &&
-        currentScrollY > lastScrollY
+        element
+          ? currentScrollY > element?.offsetTop - 100 &&
+            currentScrollY > lastScrollY
+          : true && currentScrollY > lastScrollY
       ) {
         setIsHidden(true);
       } else {
@@ -41,27 +50,38 @@ const Header = () => {
   }, [isScrollLocked]);
 
   const handleNavClick = (elementId) => {
-    window.clearTimeout(window.scrollTimer);
+    if (pathname !== "/") {
+      router.push("/");
+      return;
+    }
+
+    if (scrollTimer) {
+      clearTimeout(scrollTimer);
+    }
 
     setIsScrollLocked(true);
     if (elementId) {
-      document
-        .getElementById(elementId)
-        ?.scrollIntoView({ behavior: "smooth" });
+      const element = document.getElementById(elementId);
+      if (element) {
+        element.scrollIntoView({ behavior: "smooth" });
+      }
     } else {
       window.scrollTo({ top: 0, behavior: "smooth" });
     }
 
-    window.scrollTimer = setTimeout(() => {
+    const timer = setTimeout(() => {
       setIsScrollLocked(false);
     }, 1000);
+    setScrollTimer(timer);
   };
 
   useEffect(() => {
     return () => {
-      window.clearTimeout(window.scrollTimer);
+      if (scrollTimer) {
+        clearTimeout(scrollTimer);
+      }
     };
-  }, []);
+  }, [scrollTimer]);
 
   return (
     <motion.header
