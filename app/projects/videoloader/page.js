@@ -24,6 +24,9 @@ const Videoloader = () => {
       <div className='mt-10'>
         <TechnologyLegend {...videoLoaderProject} />
       </div>
+      <div className='mt-10 max-w-xl md:max-w-4xl mx-auto text-xl'>
+        Working with web scrapers and creating API with them.
+      </div>
     </div>
   );
 };

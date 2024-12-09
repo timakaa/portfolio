@@ -24,6 +24,11 @@ const CryptoPay = () => {
       <div className='mt-10'>
         <TechnologyLegend {...cryptoPayProject} />
       </div>
+      <div className='mt-10 max-w-xl md:max-w-4xl mx-auto text-xl'>
+        I was interested in how to work with the blockchain and therefore I
+        decided to try to create a bot that can accept cryptocurrency (it cannot
+        return it). Integration is made only with the TRON blockchain.
+      </div>
     </div>
   );
 };

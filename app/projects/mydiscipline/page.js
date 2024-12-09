@@ -24,6 +24,10 @@ const MyDiscipline = () => {
       <div className='mt-10'>
         <TechnologyLegend {...myDisciplineProject} />
       </div>
+      <div className='mt-10 max-w-xl md:max-w-4xl mx-auto text-xl'>
+        This project was created just to understand how to work with UI and
+        charts.
+      </div>
     </div>
   );
 };

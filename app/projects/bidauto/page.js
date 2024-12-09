@@ -24,6 +24,10 @@ const BidAuto = () => {
       <div className='mt-10'>
         <TechnologyLegend {...bidAutoProject} />
       </div>
+      <div className='mt-10 max-w-xl md:max-w-4xl mx-auto text-xl'>
+        It was a team effort, the main integrations were multilingualism with
+        i18n and Stripe.
+      </div>
     </div>
   );
 };
