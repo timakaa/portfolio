@@ -105,20 +105,20 @@ const Header = () => {
         </DockIcon>
         <DockIcon>
           <Button
-            onClick={() => handleNavClick("tech-stack")}
-            variant='ghost'
-            className='p-3 rounded-full'
-          >
-            <Cpu size={18} />
-          </Button>
-        </DockIcon>
-        <DockIcon>
-          <Button
             onClick={() => handleNavClick("projects")}
             variant='ghost'
             className='p-3 rounded-full'
           >
             <BriefcaseBusiness size={18} />
+          </Button>
+        </DockIcon>
+        <DockIcon>
+          <Button
+            onClick={() => handleNavClick("tech-stack")}
+            variant='ghost'
+            className='p-3 rounded-full'
+          >
+            <Cpu size={18} />
           </Button>
         </DockIcon>
         <DockIcon>
