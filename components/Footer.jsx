@@ -55,25 +55,25 @@ const Footer = () => {
                 <div className='flex flex-col mt-1 text-neutral-500'>
                   <span
                     onClick={() => handleNavClick()}
-                    className='cursor-pointer'
+                    className='cursor-pointer hover:text-neutral-200'
                   >
                     Home
                   </span>
                   <span
-                    onClick={() => handleNavClick("tech-stack")}
-                    className='cursor-pointer'
-                  >
-                    Tech Stack
-                  </span>
-                  <span
                     onClick={() => handleNavClick("projects")}
-                    className='cursor-pointer'
+                    className='cursor-pointer hover:text-neutral-200'
                   >
                     Projects
                   </span>
                   <span
+                    onClick={() => handleNavClick("tech-stack")}
+                    className='cursor-pointer hover:text-neutral-200'
+                  >
+                    Tech Stack
+                  </span>
+                  <span
                     onClick={() => handleNavClick("about")}
-                    className='cursor-pointer'
+                    className='cursor-pointer hover:text-neutral-200'
                   >
                     About
                   </span>
@@ -85,14 +85,14 @@ const Footer = () => {
                   <a
                     href='https://bidauto.online'
                     target='_blank'
-                    className='cursor-pointer'
+                    className='cursor-pointer hover:text-neutral-200'
                   >
                     BidAuto
                   </a>
                   <a
                     href='https://mydiscipline.online'
                     target='_blank'
-                    className='cursor-pointer'
+                    className='cursor-pointer hover:text-neutral-200'
                   >
                     MyDiscipline
                   </a>
