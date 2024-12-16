@@ -8,11 +8,7 @@ import { isMobile } from "react-device-detect";
 const About = () => {
   const data = [
     {
-      title: (
-        <span>
-          The Beggining <div className='mt-[6px]'>2020</div>
-        </span>
-      ),
+      title: "2021",
       content: (
         <div>
           <motion.p
@@ -21,14 +17,15 @@ const About = () => {
             viewport={{ amount: 0.8 }}
             className='text-neutral-800 dark:text-neutral-200 text-base md:text-xl font-medium mb-8'
           >
-            The pandemic hit and I was forced to stay home. I started learning
-            how to code and build websites
+            School was boring so I decided to find something fun. And started
+            learn web. <br />
+            <br />I learned HTML, CSS, Basic JS, and start to learn React.
           </motion.p>
         </div>
       ),
     },
     {
-      title: "2021",
+      title: "2022",
       content: (
         <div>
           <motion.p
@@ -37,7 +34,7 @@ const About = () => {
             viewport={{ amount: 0.8 }}
             className='text-neutral-800 dark:text-neutral-200 text-base md:text-xl font-medium mb-2'
           >
-            Then I started building simple projects
+            Then I built a few simple projects
           </motion.p>
           <motion.p
             initial={{ opacity: 0, x: !isMobile ? 20 : 0 }}
@@ -64,7 +61,7 @@ const About = () => {
       ),
     },
     {
-      title: "Early 2022",
+      title: "Early 2023",
       content: (
         <div>
           <motion.p
