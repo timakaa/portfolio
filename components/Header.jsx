@@ -34,7 +34,7 @@ const Header = () => {
 
       if (
         element
-          ? currentScrollY > element?.offsetTop - 100 &&
+          ? currentScrollY > element?.offsetTop - 150 &&
             currentScrollY > lastScrollY
           : true && currentScrollY > lastScrollY
       ) {
