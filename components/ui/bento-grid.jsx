@@ -3,6 +3,7 @@ import { ArrowRightIcon } from "@radix-ui/react-icons";
 import { cn } from "@/lib/utils";
 import { Button } from "@/components/ui/button";
 import Lock from "./Lock";
+import { Github } from "lucide-react";
 import {
   Tooltip,
   TooltipContent,
@@ -37,6 +38,7 @@ const BentoCard = ({
   cta,
   technologies,
   projectLink,
+  github,
 }) => (
   <div
     key={name}
@@ -54,12 +56,28 @@ const BentoCard = ({
         <TooltipProvider>
           <Tooltip delayDuration={0}>
             <TooltipTrigger asChild>
-              <div className='z-20 text-neutral-500'>
+              <div className='z-20 text-neutral-300'>
                 <Lock />
               </div>
             </TooltipTrigger>
             <TooltipContent>
               <p>This project is not live</p>
+            </TooltipContent>
+          </Tooltip>
+        </TooltipProvider>
+      </div>
+    )}
+    {github && (
+      <div className='absolute top-6 left-16 z-10'>
+        <TooltipProvider>
+          <Tooltip delayDuration={0}>
+            <TooltipTrigger asChild>
+              <div className='z-20 font-light text-neutral-300'>
+                <Github />
+              </div>
+            </TooltipTrigger>
+            <TooltipContent>
+              <p>This project is open source</p>
             </TooltipContent>
           </Tooltip>
         </TooltipProvider>

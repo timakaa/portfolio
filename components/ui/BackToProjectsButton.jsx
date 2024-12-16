@@ -8,10 +8,13 @@ const BackToProjectsButton = () => {
   const router = useRouter();
 
   return (
-    <Button variant='shine' onClick={() => router.back()}>
-      <div className='flex items-center gap-2'>
-        <ChevronLeft size={16} />
-        Back to projects
+    <Button className='group' variant='shine' onClick={() => router.back()}>
+      <div className='flex items-center gap-x-1'>
+        <ChevronLeft
+          className='group-hover:-translate-x-0.5 duration-200'
+          size={16}
+        />
+        <span className='text-xs md:text-sm'>Back to projects</span>
       </div>
     </Button>
   );

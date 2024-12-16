@@ -1,6 +1,6 @@
 import ProjectsList from "./ui/ProjectsList";
 import ProjectsTitle from "./ui/ProjectsTitle";
-import projects from "@/lib/projects";
+import { projectsPreview as projects } from "@/lib/projects";
 
 const Projects = () => {
   return (

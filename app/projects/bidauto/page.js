@@ -1,7 +1,8 @@
 import Image from "next/image";
 import BackToProjectsButton from "@/components/ui/BackToProjectsButton";
 import TechnologyLegend from "@/components/ui/TechnologyLegend";
-import projects from "@/lib/projects";
+import { projects } from "@/lib/projects";
+import ProjectStore from "@/components/ui/ProjectStore";
 
 const bidAutoProject = projects.find(
   (project) => project.name.toLowerCase() === "bidauto",
@@ -24,10 +25,7 @@ const BidAuto = () => {
       <div className='mt-10'>
         <TechnologyLegend {...bidAutoProject} />
       </div>
-      <div className='mt-10 max-w-xl md:max-w-4xl mx-auto text-xl'>
-        It was a team effort, the main integrations were multilingualism with
-        i18n and Stripe.
-      </div>
+      <ProjectStore story={bidAutoProject.story} />
     </div>
   );
 };

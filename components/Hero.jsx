@@ -56,7 +56,7 @@ const Hero = () => {
         >
           <Button
             iconPlacement='right'
-            className='px-8'
+            className='px-8 group flex items-center gap-x-1'
             variant='shine'
             size='lg'
             onClick={() => {
@@ -65,8 +65,11 @@ const Hero = () => {
                 .scrollIntoView({ behavior: "smooth" });
             }}
           >
-            <span className='mr-2'>My Projects</span>
-            <ChevronRight size={16} />
+            <span className='text-xs md:text-sm'>My Projects</span>
+            <ChevronRight
+              className='group-hover:translate-x-0.5 duration-200'
+              size={16}
+            />
           </Button>
         </motion.div>
         <div className='mt-10 flex justify-center'>

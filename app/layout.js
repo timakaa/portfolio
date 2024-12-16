@@ -1,7 +1,12 @@
 import "./globals.css";
 import Header from "@/components/Header";
-import Footer from "@/components/Footer";
 import { GeistSans } from "geist/font/sans";
+import dynamic from "next/dynamic";
+
+const Footer = dynamic(() => import("@/components/Footer"), {
+  loading: () => <div></div>,
+  ssr: true,
+});
 
 export const metadata = {
   title: "Tima Djeletyan",

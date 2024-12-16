@@ -19,6 +19,7 @@ const ProjectsTitle = () => {
         Projects
       </motion.h2>
       <motion.div
+        className='group'
         initial={{ opacity: 0, x: !isMobile ? 100 : 0 }}
         whileInView={{ opacity: 1, x: !isMobile ? 0 : 0 }}
         transition={{ duration: 0.3 }}
@@ -26,9 +27,12 @@ const ProjectsTitle = () => {
       >
         <Link href='/projects'>
           <Button asChild variant='shine'>
-            <div>
-              <span>See All</span>
-              <ChevronRight className='ml-2 h-4 w-4' />
+            <div className='flex items-center gap-x-1 w-full'>
+              <span className='text-xs md:text-sm'>See All</span>
+              <ChevronRight
+                className='group-hover:translate-x-0.5 duration-200'
+                size={16}
+              />
             </div>
           </Button>
         </Link>

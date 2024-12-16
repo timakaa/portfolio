@@ -101,7 +101,7 @@ const Footer = () => {
             </div>
           </div>
         </div>
-        <BackgroundBeams className='rounded-xl z-10' />
+        <BackgroundBeams className='rounded-xl z-10 h-full' />
       </div>
     </footer>
   );

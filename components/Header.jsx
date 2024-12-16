@@ -13,6 +13,7 @@ import { Button } from "./ui/button";
 import { isMobile } from "react-device-detect";
 import { usePathname } from "next/navigation";
 import { useRouter } from "next/navigation";
+import { throttle } from "@/lib/throttle";
 
 const Header = () => {
   const [isHidden, setIsHidden] = useState(false);
@@ -25,7 +26,7 @@ const Header = () => {
     if (isScrollLocked) return;
 
     let lastScrollY = window.scrollY;
-    const handleScroll = () => {
+    const handleScroll = throttle(() => {
       const currentScrollY = window.scrollY;
 
       const element =
@@ -43,10 +44,13 @@ const Header = () => {
       }
 
       lastScrollY = currentScrollY;
-    };
+    }, 100);
 
     window.addEventListener("scroll", handleScroll);
-    return () => window.removeEventListener("scroll", handleScroll);
+    return () => {
+      handleScroll.cancel();
+      window.removeEventListener("scroll", handleScroll);
+    };
   }, [isScrollLocked]);
 
   const handleNavClick = (elementId) => {

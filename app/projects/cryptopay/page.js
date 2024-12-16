@@ -1,7 +1,8 @@
 import Image from "next/image";
 import BackToProjectsButton from "@/components/ui/BackToProjectsButton";
 import TechnologyLegend from "@/components/ui/TechnologyLegend";
-import projects from "@/lib/projects";
+import { projects } from "@/lib/projects";
+import ProjectStore from "@/components/ui/ProjectStore";
 
 const cryptoPayProject = projects.find(
   (project) => project.name.toLowerCase() === "cryptopay",
@@ -24,11 +25,7 @@ const CryptoPay = () => {
       <div className='mt-10'>
         <TechnologyLegend {...cryptoPayProject} />
       </div>
-      <div className='mt-10 max-w-xl md:max-w-4xl mx-auto text-xl'>
-        I was interested in how to work with the blockchain and therefore I
-        decided to try to create a bot that can accept cryptocurrency (it cannot
-        return it). Integration is made only with the TRON blockchain.
-      </div>
+      <ProjectStore story={cryptoPayProject.story} />
     </div>
   );
 };
