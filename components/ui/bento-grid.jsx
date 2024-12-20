@@ -83,7 +83,7 @@ const BentoCard = ({
         </TooltipProvider>
       </div>
     )}
-    <div>{background}</div>
+    <div>{React.cloneElement(background)}</div>
     <div className='pointer-events-none absolute inset-0 transform-gpu transition-all duration-300 group-hover:bg-black/[.03] group-hover:dark:bg-neutral-800/10 z-[1]' />
     <Link href={href} className='absolute inset-0 z-[5]'></Link>
     <div
