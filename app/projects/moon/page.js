@@ -1,5 +1,6 @@
 import BackToProjectsButton from "@/components/ui/BackToProjectsButton";
 import TechnologyLegend from "@/components/ui/TechnologyLegend";
+import ProjectStory from "@/components/ui/ProjectStory";
 import { projects } from "@/lib/projects";
 import Image from "next/image";
 
@@ -24,13 +25,7 @@ const Moon = () => {
       <div className='mt-10'>
         <TechnologyLegend {...moonProject} iconClassName='rounded-xl' />
       </div>
-      <div className='mt-10 max-w-xl md:max-w-4xl flex flex-col gap-y-14 mx-auto text-xl'>
-        {moonProject.story.map((story, index) => (
-          <div key={index}>
-            <p>{story}</p>
-          </div>
-        ))}
-      </div>
+      <ProjectStory project={moonProject} />
     </div>
   );
 };

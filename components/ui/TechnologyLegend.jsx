@@ -21,7 +21,7 @@ const TechnologyLegend = ({
   github,
 }) => {
   return (
-    <div className='px-6 md:px-20 z-20 bg-background py-8 rounded-xl border border-border max-w-xl md:max-w-4xl mx-auto'>
+    <div className='px-6 md:px-20 z-20 bg-background py-8 rounded-xl border border-border max-w-xl md:max-w-5xl mx-auto'>
       <div className='flex items-center md:gap-4 gap-2'>
         <div className='md:size-14 size-8 relative'>
           {React.cloneElement(icon, {
