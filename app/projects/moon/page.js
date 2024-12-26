@@ -20,7 +20,7 @@ const Moon = () => {
           alt='Moon'
           className='rounded-xl w-full object-cover border-border border'
         />
-        <div className='absolute top-0 left-0 w-full h-full bg-black/20'></div>
+        <div className='absolute top-0 left-0 w-full h-full bg-black/10'></div>
       </div>
       <div className='mt-10'>
         <TechnologyLegend {...moonProject} iconClassName='rounded-xl' />
