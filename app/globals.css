@@ -6,30 +6,32 @@ html {
   scroll-behavior: smooth;
 }
 
-body::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100vh;
-  background-image: linear-gradient(
-      to right,
-      rgba(255, 255, 255, 0.03) 1px,
-      transparent 1px
-    ),
-    linear-gradient(to bottom, rgba(255, 255, 255, 0.05) 1px, transparent 1px);
-  background-size: 40px 40px;
-  pointer-events: none;
-  mask-image: radial-gradient(circle at center, black 10%, transparent 100%);
-  z-index: -1;
-}
-
 @layer components {
+  .grid-background::before {
+    content: "";
+    position: absolute;
+    top: -21%;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    width: 100%;
+    height: 125%;
+    background-image: linear-gradient(
+        to right,
+        rgba(255, 255, 255, 0.0325) 1px,
+        transparent 1px
+      ),
+      linear-gradient(to bottom, rgba(255, 255, 255, 0.05) 1px, transparent 1px);
+    background-size: 40px 40px;
+    pointer-events: none;
+    mask-image: radial-gradient(circle at center, black 10%, transparent 100%);
+    z-index: -1;
+  }
+
   .dot-background {
     background-color: hsl(var(--background));
     position: relative;
-    @apply min-h-screen;
+    @apply min-h-full;
   }
 
   .dot-background::before {
@@ -37,10 +39,10 @@ body::before {
     position: absolute;
     top: 0;
     left: 0;
-    width: 100%;
-    height: 100vh;
+    bottom: 0;
+    right: 0;
     background-image: radial-gradient(
-      rgba(255, 255, 255, 0.2) 1px,
+      rgba(255, 255, 255, 0.15) 1px,
       transparent 1px
     );
     background-size: 40px 40px;

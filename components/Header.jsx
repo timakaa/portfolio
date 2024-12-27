@@ -89,7 +89,7 @@ const Header = () => {
 
   return (
     <motion.header
-      className='sticky top-0 flex justify-center !z-[9999]'
+      className='sticky top-0 flex justify-center !z-[9999] bg-transparent'
       initial={{ y: -100, scale: !isMobile ? 0.6 : 1 }}
       animate={{
         y: isHidden ? -100 : 0,
