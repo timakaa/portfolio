@@ -2,7 +2,7 @@ import Image from "next/image";
 import BackToProjectsButton from "@/components/ui/BackToProjectsButton";
 import TechnologyLegend from "@/components/ui/TechnologyLegend";
 import { projects } from "@/lib/projects";
-import ProjectStore from "@/components/ui/ProjectStore";
+import ProjectStory from "@/components/ui/ProjectStory";
 
 const videoLoaderProject = projects.find(
   (project) => project.name.toLowerCase() === "videoloader",
@@ -25,7 +25,7 @@ const Videoloader = () => {
       <div className='mt-10'>
         <TechnologyLegend {...videoLoaderProject} />
       </div>
-      <ProjectStore story={videoLoaderProject.story} />
+      <ProjectStory project={videoLoaderProject} />
     </div>
   );
 };

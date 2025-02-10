@@ -2,7 +2,7 @@ import BackToProjectsButton from "@/components/ui/BackToProjectsButton";
 import Image from "next/image";
 import { projects } from "@/lib/projects";
 import TechnologyLegend from "@/components/ui/TechnologyLegend";
-import ProjectStore from "@/components/ui/ProjectStore";
+import ProjectStory from "@/components/ui/ProjectStory";
 
 const urlShortenerProject = projects.find(
   (project) => project.name.toLowerCase() === "url shortener",
@@ -38,7 +38,7 @@ const UrlShortener = () => {
       <div className='mt-10'>
         <TechnologyLegend {...urlShortenerProject} />
       </div>
-      <ProjectStore story={urlShortenerProject.story} />
+      <ProjectStory project={urlShortenerProject} />
     </div>
   );
 };
